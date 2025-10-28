@@ -1,5 +1,7 @@
+import PagePadrao from "../../components/PagePadrao";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return <PagePadrao></PagePadrao>;
 };
 
 export default Home;
