@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "/download.png";
+import InputIcon from "../InputIcon";
 
 const Header = () => {
   return (
@@ -8,6 +9,9 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <img src={logo} alt="Logo do condomínio" className="h-10" />
         </div>
+
+        <InputIcon placeholder="O que deseja buscar" />
+
         <nav className="flex gap-6 text-sm font-medium">
           <Link to="/home" className="hover:text-blue-300 transition">
             Home
