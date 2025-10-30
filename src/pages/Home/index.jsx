@@ -1,165 +1,39 @@
+import { Aside } from "../../components/Aside";
+import { DefaultLayout } from "../../components/DefaultLayout";
+import { List } from "../../components/List";
 import PagePadrao from "../../components/PagePadrao";
 import { ProfileSummary } from "../../components/ProfileSummary";
 import { Publication } from "../../components/Publication";
+import { Section } from "../../components/Section";
+import { TextArea } from "../../components/TextArea";
 
 const Home = () => {
   return (
     <PagePadrao>
-      <div className="flex gap-6 px-4 py-6">
+      <DefaultLayout>
         {/* Resumo do perfil */}
-        <aside className="w-1/4 rounded-lg shadow p-4 h-fit sticky top-6">
+        <Aside>
           <ProfileSummary />
-        </aside>
-
+        </Aside>
         {/* Área de publicações */}
-        <section className="flex-1 overflow-y-auto max-h-[80vh]  rounded-lg shadow p-4">
-          {/* Aqui você pode mapear as postagens */}
-          <div className="space-y-4">
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
+        <Section>
+          {/* TextArea acima das publicações */}
+          <TextArea />
+          {/* Lista de publicações com rolagem interna */}
+          <List>
+            <div className="space-y-4">
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={i}
+                  className="bg-gray-100 dark:bg-slate-700 p-4 rounded"
+                >
+                  <Publication />
+                </div>
+              ))}
             </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            <div className="bg-gray-100 dark:bg-slate-700 p-4 rounded">
-              <Publication />
-            </div>
-            {/* ... */}
-          </div>
-        </section>
-      </div>
+          </List>
+        </Section>
+      </DefaultLayout>
     </PagePadrao>
   );
 };

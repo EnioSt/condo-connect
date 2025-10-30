@@ -2,7 +2,7 @@ import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 import { MdOutlineComment } from "react-icons/md";
 
 export const Publication = () => {
-  const liked = true;
+  const liked = false;
   return (
     <div className="flex flex-col gap-3 text-gray-800 dark:text-gray-400">
       <h3 className="text-xl font-semibold">

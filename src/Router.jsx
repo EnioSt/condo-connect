@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { AuthLayout } from "./Auth";
+import Profile from "./pages/Profile";
 
 function AppRouter() {
   return (
@@ -13,6 +14,7 @@ function AppRouter() {
           <Route path="login" element={<Login />} />
         </Route>
         <Route index element={<Home />} />
+        <Route path="/perfil" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
