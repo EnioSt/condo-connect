@@ -6,7 +6,7 @@ const InputIcon = ({
   ...rest
 }) => {
   return (
-    <div className="relative w-full max-w-sm">
+    <div className="relative w-full max-w-sm flex items-center justify-center">
       <input
         type="text"
         placeholder={placeholder}

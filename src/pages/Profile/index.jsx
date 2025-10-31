@@ -7,10 +7,11 @@ import { TextArea } from "../../components/TextArea";
 const Profile = () => {
   return (
     <PagePadrao>
-      <div className="flex items-center justify-center">
-        <Section>
+      <div className="h-full flex items-center justify-center">
+        <Section className="w-full max-w-4xl h-full flex flex-col justify-center">
           {/* TextArea acima das publicações */}
           <TextArea />
+
           {/* Lista de publicações com rolagem interna */}
           <List>
             <div className="space-y-4">
